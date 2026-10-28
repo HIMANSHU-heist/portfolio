@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#07070a;color:#fff;overflow-x:hidden}
+::selection{background:#8b5cf6;color:#fff}
+.marq{display:flex;width:max-content;animation:marq 45s linear infinite}
+.marq.rev{animation-direction:reverse}
+.marq:hover{animation-play-state:paused}
+@keyframes marq{to{transform:translateX(-50%)}}
+.spot::before{content:'';position:absolute;inset:0;background:radial-gradient(400px circle at var(--x,50%) var(--y,50%),rgba(139,92,246,.2),transparent 60%);opacity:0;transition:.3s;pointer-events:none}
+.spot:hover::before{opacity:1}
+.grad{background:linear-gradient(90deg,#a78bfa,#f472b6,#fb923c);-webkit-background-clip:text;background-clip:text;color:transparent}
